@@ -8,6 +8,9 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
        /* @import url('style.css'); */
+       h1 {
+           color:#008cff;
+       }
        p {
            color: #678
        }
@@ -21,10 +24,16 @@
            color: orange;
        }
        /* id選取器只可使用一次 */
+
+       /* 
+        CSS權重 
+        CSS影響的元素愈少，權重愈重，愈優先套用
+        ID > CLASS > TAG
+       */
     </style>
 </head>
 <body>
-    <h1>title</h1>
+    <h1 class="abc" id="xyz">title</h1>
     <p class="abc@:2">
         安徽去年淡淡我是你知道空中一
         <b>asdf</b>
