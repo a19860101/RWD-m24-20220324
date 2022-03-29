@@ -23,4 +23,4 @@
 | 向右分割 | Ctrl + \ | Cmd + \ |
 | 刪除列 | Ctrl + Shift + K | Cmd + Shift + K |
 | 收合側邊欄 | Ctrl + B | Cmd + B |
-| 開發者工具 | F12 | Cmd + Opt + I |
+| 開發者工具 | F12,Ctrl + Shift + I | Cmd + Opt + I |
