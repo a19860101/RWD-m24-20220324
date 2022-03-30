@@ -31,7 +31,7 @@
 
 [unsplash](https://unsplash.com/)
 
-[Lorem Picsum](**https**://picsum.photos/)
+[Lorem Picsum](https://picsum.photos/)
 
 [PlaceHolder](https://placeholder.com/)
 
