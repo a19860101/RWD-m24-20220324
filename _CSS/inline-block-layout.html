@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin: auto;
+            font-size: 0;
+        }
+        .box {
+            width: 400px;
+            display: inline-block;
+            /* background-color: #0af; */
+            font-size: 16px;
+            padding: 15px;
+
+            vertical-align: top;
+            /* top, bottom, middle, baseline */
+        }
+        /* 
+            缺點
+            元素之間會有4px不等的空隙
+
+            解法步驟
+            1. 將父元素font-size設定為0
+            2. 將子元素font-size還原
+            3. 設定vertical-align
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est doloremque rerum perferendis, officiis nemo placeat atque odit dicta modi similique sunt repellendus! In eaque fugit nemo quae provident. Ratione, nam.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est doloremque rerum perferendis, officiis nemo placeat atque odit dicta modi similique sunt repellendus! In eaque fugit nemo quae provident. Ratione, nam.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est doloremque rerum perferendis, officiis nemo placeat atque odit dicta modi similique sunt repellendus! In eaque fugit nemo quae provident. Ratione, nam.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est doloremque rerum perferendis, officiis nemo placeat atque odit dicta modi similique sunt repellendus! In eaque fugit nemo quae provident. Ratione, nam.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est doloremque rerum perferendis, officiis nemo placeat atque odit dicta modi similique sunt repellendus! In eaque fugit nemo quae provident. Ratione, nam.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est doloremque rerum perferendis, officiis nemo placeat atque odit dicta modi similique sunt repellendus! In eaque fugit nemo quae provident. Ratione, nam.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
