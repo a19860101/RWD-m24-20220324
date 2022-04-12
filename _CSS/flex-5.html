@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1200px;
+            display: flex;
+        }
+
+        .box {
+            flex: 0 0 300px;
+            /* flex: grow shrink basis */
+        }
+        .box:nth-child(1){
+            order:3;
+        }
+        .box:nth-child(2){
+            order:1;
+        }
+        .box:nth-child(3){
+            order:2;
+        }
+        .box:nth-child(4){
+            order:4;
+        }
+        /* 
+            order排序
+            未設定order -> order小 -> order大
+        */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa
+                reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum
+                rerum sint.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa
+                reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum
+                rerum sint.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa
+                reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum
+                rerum sint.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa
+                reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum
+                rerum sint.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa
+                reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum
+                rerum sint.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa
+                reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum
+                rerum sint.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa
+                reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum
+                rerum sint.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
