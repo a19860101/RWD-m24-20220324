@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin: auto;
+
+            /* height: 300px; */
+            /* overflow: auto; */
+            display: flow-root;
+
+            background-color: #ccc;
+        }
+        .box {
+            float: left;
+            width: calc(100% / 3);
+            padding: 15px;
+        }
+        /* 
+            缺點:父元素崩塌
+            當子元素都是浮動時，父元素高度會崩塌(歸零)
+
+            解法：
+            1. 設height
+            2. overflow: auto
+            3. display: flow-root
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum rerum sint.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum rerum sint.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum rerum sint.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum rerum sint.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum rerum sint.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laborum, amet harum beatae ipsa reprehenderit necessitatibus fugit molestias animi ratione optio vero ea quaerat dicta dolorem atque eum rerum sint.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
