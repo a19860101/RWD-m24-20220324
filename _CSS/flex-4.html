@@ -14,12 +14,12 @@
             /* height: 600px; */
             background-color: #ccc;
             display: flex;
-
+            flex-wrap: wrap;
             /* flex-direction: column; */
             
         }
         .box {
-            flex-basis: 300px;
+            flex-basis: 600px;
             /* width: 200px; */
             /* height: 200px; */
         }
@@ -30,18 +30,22 @@
         */
         .box:nth-child(1){
             background-color: #fa0;
-            flex-grow: 1;
+            flex-grow: 0;
+            flex-shrink: 0;
         }
         .box:nth-child(2){
             background-color: #adff4f;
-            flex-grow: 10;
+            flex-grow: 0;
+            flex-shrink: 4;
         }
         .box:nth-child(3){
             background-color: #58f9ff;
-            flex-grow: 1;
+            flex-grow: 0;
+            flex-shrink: 2;
         }
         /* 
             flex-grow 預設為0(關閉)
+            flex-shrink 預設為1(開啟，但會跟wrap有衝突)
         */
     </style>
 </head>
