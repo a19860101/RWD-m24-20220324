@@ -11,7 +11,7 @@
         }
         .container {
             width: 1200px;
-            height: 600px;
+            /* height: 600px; */
             background-color: #ccc;
             display: flex;
 
@@ -19,8 +19,8 @@
             
         }
         .box {
-            flex-basis: 20%;
-            width: 200px;
+            flex-basis: 300px;
+            /* width: 200px; */
             /* height: 200px; */
         }
         /* 
@@ -30,13 +30,19 @@
         */
         .box:nth-child(1){
             background-color: #fa0;
+            flex-grow: 1;
         }
         .box:nth-child(2){
             background-color: #adff4f;
+            flex-grow: 10;
         }
         .box:nth-child(3){
             background-color: #58f9ff;
+            flex-grow: 1;
         }
+        /* 
+            flex-grow 預設為0(關閉)
+        */
     </style>
 </head>
 <body>
