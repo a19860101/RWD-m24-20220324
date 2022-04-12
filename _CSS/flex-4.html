@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            height: 600px;
+            background-color: #ccc;
+            display: flex;
+
+            /* flex-direction: column; */
+            
+        }
+        .box {
+            flex-basis: 20%;
+            width: 200px;
+            /* height: 200px; */
+        }
+        /* 
+            當flex-direction: row時，flex-basis代表的是寬度
+            當flex-direction: column時，flex-basis代表的是高度
+        
+        */
+        .box:nth-child(1){
+            background-color: #fa0;
+        }
+        .box:nth-child(2){
+            background-color: #adff4f;
+        }
+        .box:nth-child(3){
+            background-color: #58f9ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae nobis eaque, soluta necessitatibus sit modi commodi sunt, ex numquam veniam assumenda! Modi tempore dolore distinctio reprehenderit tempora repellat quibusdam sit.</div>
+        <div class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae nobis eaque, soluta necessitatibus sit modi commodi sunt, ex numquam veniam assumenda! Modi tempore dolore distinctio reprehenderit tempora repellat quibusdam sit.</div>
+        <div class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae nobis eaque, soluta necessitatibus sit modi commodi sunt, ex numquam veniam assumenda! Modi tempore dolore distinctio reprehenderit tempora repellat quibusdam sit.</div>
+    </div>
+</body>
+</html>
