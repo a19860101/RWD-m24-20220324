@@ -1,0 +1,13 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+table {
+    border-collapse: collapse;
+}
+/* global style */
+body {
+    font-family: 'Segoe UI','微軟正黑體';
+}
