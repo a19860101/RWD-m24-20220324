@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            height: 2000px;
+        }
         div {
             width: 100px;
             height: 100px;
@@ -26,11 +29,30 @@
             left: 20px;
             z-index: 3;
         }
+        .a1 {
+            position: absolute;
+            background-color: #8cff62;
+
+            top: 0;
+            right: 0;
+        }
+        .scope {
+            width: 800px;
+            height: 600px;
+            background-color: #aaa;
+
+            position: relative;
+        }
+        
     </style>
 </head>
 <body>
     <div class="r1"></div>
     <div class="r2"></div>
+    <div class="a1">1</div>
+    <div class="scope">
+        <div class="a1">2</div>
+    </div>
     <!-- 
         position 定位
         1. static 靜態
