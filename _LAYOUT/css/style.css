@@ -64,3 +64,22 @@ header {
 .header-content p {
     font-size: 20px;
 }
+/* about */
+#about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#about h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 30px;
+}
+#about h3 {
+    font-size: 1.8rem;
+}
+#about p {
+    margin: 15px 0;
+    line-height: 1.7;
+}
