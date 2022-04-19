@@ -23,6 +23,9 @@ table {
 body {
     font-family: 'Segoe UI','微軟正黑體';
 }
+img {
+    width: 100%;
+}
 /* Button */
 .btn {
     display: inline-block;
