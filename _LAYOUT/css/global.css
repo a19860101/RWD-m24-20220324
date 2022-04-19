@@ -51,3 +51,21 @@ body {
 .btn-dark {
     --btn-bg: var(--dark);
 }
+.btn-red:hover {
+    --btn-bg:#f39595;
+}
+.btn-blue:hover {
+    --btn-bg:#8bcdf3;
+}
+.btn-green:hover {
+    --btn-bg:#5ee19f;
+}
+.btn-yellow:hover {
+    --btn-bg:#f8ee82;
+}
+.btn-orange:hover {
+    --btn-bg:#f2dc5f;
+}
+.btn-dark:hover {
+    --btn-bg:#434343;
+}
