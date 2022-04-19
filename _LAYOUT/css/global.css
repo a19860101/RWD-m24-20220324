@@ -1,3 +1,15 @@
+/* 變數 */
+:root {
+    --red: #ff2d2d;
+    --blue: #43a4ff;
+    --green: #3dc96b;
+    --yellow: #fcff53;
+    --orange: #ffb845;
+    --dark: #222;
+    --light: #dcdcdc;
+    --black: #000;
+    --white: #fff;
+}
 /* reset */
 * {
     margin: 0;
@@ -10,4 +22,14 @@ table {
 /* global style */
 body {
     font-family: 'Segoe UI','微軟正黑體';
+}
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 0;
+    text-decoration: none;
+    background-color: var(--red);
+    color: var(--dark);
+    border-radius: 5px;
 }
