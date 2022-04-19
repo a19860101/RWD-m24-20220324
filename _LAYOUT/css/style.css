@@ -104,9 +104,15 @@ header {
 }
 #service h3 {
     font-size: 1.8rem;
-
+    margin-top: 25px;
+}
+#service i {
+    color: var(--red);
 }
 #service p {
     margin: 15px 0;
     line-height: 1.7;
+}
+#service .col-3 {
+    text-align: center;
 }
