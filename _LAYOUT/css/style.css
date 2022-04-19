@@ -73,7 +73,7 @@ header {
 #about {
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: #F3E9DD;
+    background-color: #FDF6EC;
 }
 #about h2 {
     font-size: 3rem;
@@ -93,7 +93,7 @@ header {
 #service {
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: #FDF6EC;
+    background-color: #F3E9DD;
 }
 #service h2 {
     font-size: 3rem;
@@ -120,6 +120,7 @@ header {
 #product {
     padding-top: 100px;
     padding-bottom: 100px;
+    background-color: #FDF6EC;
 }
 #product h2 {
     font-size: 3rem;
@@ -129,9 +130,10 @@ header {
     margin-bottom: 30px;
 }
 .product-item {
-    border: 1px solid var(--light);
+    border: 1px solid #c0ac93;
     border-radius:6px;
     overflow: hidden;
+    background-color: #fffdfa;
 
 }
 .product-item:hover {
@@ -152,4 +154,17 @@ header {
     position: absolute;
     right: 15px;
     bottom: 15px;
+}
+/* contact */
+#contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #F3E9DD;
+}
+#contact h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 30px;
 }
