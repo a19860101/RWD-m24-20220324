@@ -132,6 +132,11 @@ header {
     border: 1px solid var(--light);
     border-radius:6px;
     overflow: hidden;
+
+}
+.product-item:hover {
+    box-shadow: 2px 2px 12px 0px rgba(0,0,0,.2);
+
 }
 .product-content {
     padding: 15px 15px 60px;
