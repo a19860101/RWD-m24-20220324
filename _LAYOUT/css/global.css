@@ -1,6 +1,6 @@
 /* 變數 */
 :root {
-    --red: #ff2d2d;
+    --red: #ff5858;
     --blue: #43a4ff;
     --green: #3dc96b;
     --yellow: #fcff53;
@@ -29,7 +29,25 @@ body {
     padding: 8px 15px;
     border: 0;
     text-decoration: none;
-    background-color: var(--red);
-    color: var(--dark);
+    background-color: var(--btn-bg,var(--light));
+    color: var(--btn-text,var(--dark));
     border-radius: 5px;
+}
+.btn-red {
+    --btn-bg: var(--red);
+}
+.btn-blue {
+    --btn-bg: var(--blue);
+}
+.btn-green {
+    --btn-bg: var(--green);
+}
+.btn-yellow {
+    --btn-bg: var(--yellow);
+}
+.btn-orange {
+    --btn-bg: var(--orange);
+}
+.btn-dark {
+    --btn-bg: var(--dark);
 }
