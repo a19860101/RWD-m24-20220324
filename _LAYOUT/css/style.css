@@ -189,3 +189,9 @@ header {
     outline-width: 2px;
     outline-style: solid;
 }
+textarea.form-control {
+    height: 300px;
+}
+input[type="email"]{
+    border-color: #f00;
+}
