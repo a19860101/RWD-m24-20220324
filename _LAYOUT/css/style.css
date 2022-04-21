@@ -39,7 +39,7 @@ nav a {
 /* HEADER */
 header {
     width: 100%;
-    height: 800px;
+    height: calc(100vh + 10vw);
     /* padding-bottom: 60%; */
     /* padding-top: 300px; */
     /* padding-bottom: 300px; */
@@ -52,7 +52,11 @@ header {
     align-items: center;
     justify-content: center;
 
-    /* position: relative; */
+    position: relative;
+
+    clip-path: polygon(0 0 , 100% 0 ,100% calc(100% - 10vw), 0 100%);
+    margin-bottom: -10vw;
+    z-index: 11;
 }
 .header-content {
     background-color: #ffffff65;
@@ -65,6 +69,8 @@ header {
 
     transform: translateY(-50%); */
 
+    margin-bottom: 10vw;
+
 }
 .header-content h1 {
     font-size: 80px;
@@ -74,7 +80,7 @@ header {
 }
 /* about */
 #about {
-    padding-top: 100px;
+    padding-top:250px;
     padding-bottom: 250px;
     background-color: #FDF6EC;
     clip-path: polygon(0 0 , 100% 0 ,100% calc(100% - 10vw), 0 100%);
@@ -104,6 +110,7 @@ header {
     position: relative;
     clip-path: polygon(0 0 , 100% 0 ,100% calc(100% - 10vw), 0 100%);
     margin-bottom: -10vw;
+    z-index: 9;
 }
 #service h2 {
     font-size: 3rem;
@@ -129,8 +136,12 @@ header {
 /* product */
 #product {
     padding-top: 250px;
-    padding-bottom: 100px;
+    padding-bottom: 250px;
     background-color: #FDF6EC;
+    clip-path: polygon(0 0 , 100% 0 ,100% calc(100% - 10vw), 0 100%);
+    margin-bottom: -10vw;
+    position: relative;
+    z-index: 8;
 }
 #product h2 {
     font-size: 3rem;
@@ -167,7 +178,7 @@ header {
 }
 /* contact */
 #contact {
-    padding-top: 100px;
+    padding-top: 250px;
     padding-bottom: 100px;
     background-color: #F3E9DD;
 }
