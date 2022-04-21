@@ -168,6 +168,9 @@ header {
     border-bottom: 1px solid #bbb;
     margin-bottom: 30px;
 }
+#contact .row {
+    justify-content: center;
+}
 .form-label {
     display: inline-block;
     margin-bottom: 10px;
@@ -177,5 +180,12 @@ header {
     width: 100%;
     padding: 10px;
     border-radius: 6px;
-    border: 1px solid #c0ac93
+    border: 1px solid #c0ac93;
+    outline: 0;
+}
+.form-control:focus {
+    outline-offset: 0px;
+    outline-color: #e9b16b;
+    outline-width: 2px;
+    outline-style: solid;
 }
