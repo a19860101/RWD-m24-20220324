@@ -29,6 +29,8 @@ img {
 /* Button */
 .btn {
     display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
     padding: 8px 15px;
     border: 0;
     text-decoration: none;
