@@ -72,8 +72,12 @@ header {
 /* about */
 #about {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 250px;
     background-color: #FDF6EC;
+    clip-path: polygon(0 0 , 100% 0 ,100% calc(100% - 10vw), 0 100%);
+    margin-bottom: -10vw;
+    position: relative;
+    z-index: 10;
 }
 #about h2 {
     font-size: 3rem;
@@ -91,9 +95,12 @@ header {
 }
 /* service */
 #service {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 250px;
+    padding-bottom: 250px;
     background-color: #F3E9DD;
+    position: relative;
+    clip-path: polygon(0 0 , 100% 0 ,100% calc(100% - 10vw), 0 100%);
+    margin-bottom: -10vw;
 }
 #service h2 {
     font-size: 3rem;
@@ -118,7 +125,7 @@ header {
 }
 /* product */
 #product {
-    padding-top: 100px;
+    padding-top: 250px;
     padding-bottom: 100px;
     background-color: #FDF6EC;
 }
@@ -198,7 +205,7 @@ input[type="email"]{
 /* footer */
 
 footer {
-    
+
     padding-block:20px;
     text-align: center;
     color: var(--light);
