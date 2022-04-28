@@ -41,6 +41,11 @@ nav a {
     background-color: var(--orange);
     color: var(--dark);
 } */
+.nav-toggle {
+    position: absolute;
+    right: 12px;
+    top: 18px;
+}
 @media(min-width: 520px){
     /* NAV */
     nav {
@@ -83,6 +88,9 @@ nav a {
     .nav-link:hover {
         background-color: var(--orange);
         color: var(--dark);
+    }
+    .nav-toggle {
+        display: none;
     }
 }
 /* HEADER */
