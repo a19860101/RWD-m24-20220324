@@ -1,6 +1,22 @@
+/* 520 960 1200 */
 .container {
-    width: 1200px;
+    width: 100%;
     margin: auto;
+}
+@media(min-width:520px){
+    .container {
+        width: 520px;
+    }
+}
+@media(min-width:960px){
+    .container {
+        width: 960px;
+    }
+}
+@media(min-width:1200px){
+    .container {
+        width: 1200px;
+    }
 }
 .row {
     display: flex;
