@@ -41,7 +41,7 @@ nav a {
 /* HEADER */
 header {
     width: 100%;
-    height: calc(100vh + 10vw);
+    height: calc(80vh + 10vw);
     /* padding-bottom: 60%; */
     /* padding-top: 300px; */
     /* padding-bottom: 300px; */
@@ -75,11 +75,28 @@ header {
 
 }
 .header-content h1 {
-    font-size: 80px;
+    font-size: 60px;
+    line-height: 3.2rem;
+    margin-bottom: 12px;
 }
 .header-content p {
-    font-size: 20px;
+    font-size: 16px;
+    margin-bottom: 12px;
 }
+@media(min-width: 520px){
+    header {
+        height: calc(100vh + 10vw);
+    }
+    .header-content h1 {
+        font-size: 80px;
+        line-height: initial;
+        margin-bottom: 0;
+    }   
+    .header-content p {
+        font-size: 20px;
+    }
+}
+
 /* about */
 #about {
     padding-top:250px;
