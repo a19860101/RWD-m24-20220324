@@ -10,7 +10,16 @@
             width: 200px;
             height: 200px;
             background-color: #098;
-            transition: 500ms;
+            /* transition: 500ms; */
+
+            /* transition-property: transform,background-color;
+            transition-duration: 500ms;
+            transition-delay: 0;
+            transition-timing-function:linear; */
+            /* ease, ease-in, ease-out, ease-in-out, linear */
+
+            transition: transform 1s 0s , background-color 1s 1s;
+            /* transition: property duration delay timing-function */
         }
         .box:hover {
             transform: scale(.6) rotate(90deg);
