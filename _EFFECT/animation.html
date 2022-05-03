@@ -11,7 +11,7 @@
             height: 200px;
             background-color: #f1f737;
 
-            animation: a3 3s;
+            animation: a4 3s;
         }
 
         @keyframes a1 {
@@ -31,6 +31,13 @@
             to {
                 background-color: #e04;
             }
+        }
+        @keyframes a4 {
+            0% {}
+            25% {transform: translate(300px,0) rotate(45deg);}
+            50% {transform: translate(300px,300px) rotate(90deg);}
+            75% {transform: translate(0,300px) rotate(135deg);}
+            100% {transform: translate(0,0) rotate(180deg);}
         }
     </style>
 </head>
