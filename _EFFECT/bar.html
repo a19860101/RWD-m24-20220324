@@ -8,6 +8,7 @@
     <style>
         /* 方法一 */
         .bar {
+            margin: 15px;
             width: 40px;
             height: 40px;
             background-color: #ccc;
@@ -25,12 +26,56 @@
             border-radius: 50px;
             background-color: #222;
         }
+        .bar-2 {
+            width: 50px;
+            height: 50px;
+            background-color: #ccc;
+            border-radius: 8px;
+            margin: 15px;
+
+            position: relative;
+            
+        }
+        .bar-2 span {
+            display: block;
+            width: 70%;
+            height: 5px;
+            border-radius: 50px;
+            background-color: #222;
+
+            position: absolute;
+            inset:0;/* top:0,bottom:0,left:0,right:0 */
+            margin: auto;
+        }
+        .bar-2 span::before {
+            content:'';
+            display: block;
+            width: 100%;
+            height: 5px;
+            border-radius: 50px;
+            background-color: #ff5050;
+            top: -12px;
+            position: absolute;
+        }
+        .bar-2 span::after {
+            content:'';
+            display: block;
+            width: 100%;
+            height: 5px;
+            border-radius: 50px;
+            background-color: #50ffdf;
+            bottom: -12px;
+            position: absolute;
+        }
     </style>
 </head>
 <body>
     <div class="bar">
         <span></span>
         <span></span>
+        <span></span>
+    </div>
+    <div class="bar-2">
         <span></span>
     </div>
 </body>
