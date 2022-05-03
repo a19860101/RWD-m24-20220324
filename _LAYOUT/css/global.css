@@ -40,6 +40,7 @@ img {
     background-color: var(--btn-bg,var(--light));
     color: var(--btn-text,var(--dark));
     border-radius: 5px;
+    transition:background-color 400ms, color 400ms;
 }
 .btn-red {
     --btn-bg: var(--red);

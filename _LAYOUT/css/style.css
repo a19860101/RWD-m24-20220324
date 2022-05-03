@@ -84,6 +84,8 @@ nav a {
         display: inline-block;
         padding: 12px 10px;
         border-radius: 5px;
+
+        transition: 600ms;
     }
     .nav-link:hover {
         background-color: var(--orange);
@@ -239,7 +241,7 @@ header {
     border-radius:6px;
     overflow: hidden;
     background-color: #fffdfa;
-
+    transition: box-shadow 600ms;
 }
 .product-item:hover {
     box-shadow: 2px 2px 12px 0px rgb(0 0 0 /.2);
@@ -285,14 +287,16 @@ header {
     width: 100%;
     padding: 10px;
     border-radius: 6px;
-    border: 1px solid #c0ac93;
+    border: 3px solid transparent;
     outline: 0;
+    transition: border 400ms;
 }
 .form-control:focus {
-    outline-offset: 0px;
+    /* outline-offset: 0px;
     outline-color: #e9b16b;
     outline-width: 2px;
-    outline-style: solid;
+    outline-style: solid; */
+    border: 3px solid #ffb964
 }
 textarea.form-control {
     height: 300px;
@@ -314,6 +318,10 @@ footer {
     position: fixed;
     right: 30px;
     bottom: 30px;
-    color: var(--red);
+    color: var(--dark);
     z-index: 999;
+    transition: color 400ms;
+}
+.gotop:hover {
+    color: var(--red);
 }
