@@ -33,6 +33,16 @@
             console.log(data.name);
             console.log(data.mail);
         });
+
+        //map
+        let user_mails = users.map(function(data){
+            return data.mail
+        });
+        let user_names = users.map(function(data){
+            return data.name;
+        })
+
+        console.log(user_names);
     </script>
 </body>
 </html>
