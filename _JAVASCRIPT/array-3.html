@@ -76,11 +76,16 @@
             return data.price < 50;
         });
         console.log(drink_cheap)
-        
+
         let drink_expensive = drinks.filter(function(data){
             return data.price > 30;
         })
         console.log(drink_expensive)
+
+        let d = drinks.filter(function(data){
+            return data.name != '綠茶';
+        })
+        console.log(d);
     </script>
 </body>
 </html>
