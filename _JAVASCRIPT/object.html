@@ -19,7 +19,37 @@
             phone: '0987654321'
         }
 
-        console.log(user);
+        // console.log(user.name);
+        // console.log(user.mail);
+        // console.log(user.phone);
+
+        let users = [
+            {
+                id: 1,
+                name: 'John',
+                mail: 'john@gmail.com'
+            },
+            {
+                id:2,
+                name: 'Mary',
+                mail: 'mary@gmail.com'
+            },
+            {
+                id:3,
+                name: 'Xavier',
+                mail: 'xaxaxa@gmail.com'
+            }
+        ]
+
+        // console.log(users[0]);
+        // console.log(users[0].name);
+        // console.log(users[1]);
+        // console.log(users[1].mail);
+
+        for(let u of users){
+            console.log(u.name);
+            console.log(u.mail);
+        }
     </script>
 </body>
 </html>
