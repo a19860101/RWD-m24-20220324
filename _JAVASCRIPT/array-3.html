@@ -26,6 +26,33 @@
             }
         ];
 
+        let drinks = [
+            {
+                id: 1,
+                name: '紅茶',
+                price: 20
+            },
+            {
+                id: 1,
+                name: '綠茶',
+                price: 20
+            },
+            {
+                id: 1,
+                name: '奶茶',
+                price: 30
+            },
+            {
+                id: 1,
+                name: '珍珠奶茶',
+                price: 50
+            },
+            {
+                id: 1,
+                name: '拿鐵',
+                price: 70
+            },
+        ];
         // forEach()
         users.forEach(function(data){
             // console.log(data);
@@ -41,8 +68,19 @@
         let user_names = users.map(function(data){
             return data.name;
         })
-
         console.log(user_names);
+
+        // filter
+
+        let drink_cheap = drinks.filter(function(data){
+            return data.price < 50;
+        });
+        console.log(drink_cheap)
+        
+        let drink_expensive = drinks.filter(function(data){
+            return data.price > 30;
+        })
+        console.log(drink_expensive)
     </script>
 </body>
 </html>
