@@ -16,15 +16,31 @@
         let b = new Array('apple','banana','cat');
         
         let c = ['apple','banana','cat'];
-        // console.log(c);
+        console.log(c);
         // console.log(c[0]);
         // console.log(c[1]);
         // console.log(c[2]);
 
-        for(let i=0;i<3;i++){
-            console.log(c[i]);
+        // 陣列迭代
+        // for(let i=0;i<3;i++){
+        //     console.log(c[i]);
+        // }
+
+        // console.log(c.length);
+        // for(let i=0;i<c.length;i++){
+        //     console.log(c[i])
+        // }
+
+        // for...in
+        for(let idx in c){
+            // console.log(idx);
+            // console.log(c[idx]);
         }
 
+        // for...of
+        for(let data of c){
+            console.log(data);
+        }
     </script>
 </body>
 </html>
