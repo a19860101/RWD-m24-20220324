@@ -35,11 +35,37 @@
 
         // function expression 函式表達式
 
-        let total = function(price , tax){
+        // let total = function(price , tax){
+        //     return price * tax;
+        // }
+        // console.log(total(199,1.5));
+
+
+        // arrow function 箭頭函式
+
+        let total = (price , tax) => {
             return price * tax;
         }
-        console.log(total(199,1.5));
 
+        console.log(total(100,1.5));
+
+        // 如果大括號內只有return一個動作，則大括號跟return都可省略
+        let foo = () => 'foo' ;
+
+        // let foo = function(){
+        //     return 'foo';
+        // }
+
+        console.log(foo());
+
+        // 參數只有一個時，小括號可省略
+        let foo2 = x => x * x ;
+        console.log(foo2(12));
+
+        // let foo2 = function(x){
+        //     return x * x;
+        // }
+        
     </script>
 </body>
 </html>
