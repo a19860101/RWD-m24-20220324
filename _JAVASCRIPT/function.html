@@ -8,27 +8,37 @@
 </head>
 <body>
     <script>
-        function test(){
-            let a = 100;
-            return a;
-        }
 
-        console.log(test());
+        // function declaration 函式宣告式 (提升性)
+        // function test(){
+        //     let a = 100;
+        //     return a;
+        // }
 
-        function square(x){
-            return x * x;
-        }
-        console.log(square(11));
+        // console.log(test());
 
-        function total(price,tax){
+        // function square(x){
+        //     return x * x;
+        // }
+        // console.log(square(11));
+
+        // console.log(total(99,1.5));
+        // function total(price,tax){
+        //     return price * tax;
+        // }
+        
+
+        // function usToNtd(dollar, exchange){
+        //     return dollar * exchange;
+        // }   
+        // console.log(usToNtd(99,29));
+
+        // function expression 函式表達式
+
+        let total = function(price , tax){
             return price * tax;
         }
-        console.log(total(99,1.5));
-
-        function usToNtd(dollar, exchange){
-            return dollar * exchange;
-        }   
-        console.log(usToNtd(99,29));
+        console.log(total(199,1.5));
 
     </script>
 </body>
