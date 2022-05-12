@@ -91,6 +91,18 @@
         let drink_ary = ['紅茶','綠茶','奶茶','美式咖啡','拿鐵'];
         let test = drink_ary.includes('紅茶');
         console.log(test);
+
+        //reduce
+        let price = drinks.map(function(data){
+            return data.price;
+        })
+        console.log(price);
+
+        let total = price.reduce(function(a,b){
+            return a + b;
+        })
+
+        console.log(total);
     </script>
 </body>
 </html>
