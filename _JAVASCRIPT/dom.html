@@ -18,11 +18,11 @@
             222 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, commodi ut? Distinctio sed voluptas ipsam voluptatem nihil fuga vero? Omnis ipsum recusandae corrupti aspernatur! Laborum officiis ut modi dolorum cumque.
         </p>
         <ul>
-            <li><a href="#">item 1</a></li>
-            <li><a href="#">item 2</a></li>
-            <li><a href="#">item 3</a></li>
-            <li><a href="#">item 4</a></li>
-            <li><a href="#">item 5</a></li>
+            <li class="list"><a href="#">item 1</a></li>
+            <li class="list"><a href="#">item 2</a></li>
+            <li class="list"><a href="#">item 3</a></li>
+            <li class="list"><a href="#">item 4</a></li>
+            <li class="list"><a href="#">item 5</a></li>
         </ul>
     </div>
     <script>
@@ -30,21 +30,58 @@
 
         // getElement
 
-        let title = document.getElementById('title');
+        // let title = document.getElementById('title');
+        // console.log(title);
+
+        // let container = document.getElementsByClassName('container');
+        // console.log(container);
+
+        // let p = document.getElementsByTagName('p');
+        // console.log(p);
+        // console.log(p[0]);
+        // console.log(p[1]);
+
+        // let p1 = document.getElementsByTagName('p')[0];
+        // let p2 = document.getElementsByTagName('p')[1];
+        // console.log(p1);
+        // console.log(p2);
+
+        //querySelector
+
+        let title = document.querySelector('#title');
         console.log(title);
-
-        let container = document.getElementsByClassName('container');
+        
+        let container = document.querySelector('.container');
         console.log(container);
+        
+        let list = document.querySelector('.list');
+        console.log(list);
 
-        let p = document.getElementsByTagName('p');
+        let lists = document.querySelectorAll('.list');
+        console.log(lists);
+
+        let lists1 = document.querySelectorAll('.list')[0];
+        let lists2 = document.querySelectorAll('.list')[1];
+        let lists3 = document.querySelectorAll('.list')[2];
+        let lists4 = document.querySelectorAll('.list')[3];
+        let lists5 = document.querySelectorAll('.list')[4];
+
+        console.log(lists1);
+        console.log(lists2);
+        console.log(lists3);
+        console.log(lists4);
+        console.log(lists5);
+
+        let p = document.querySelector('p');
         console.log(p);
-        console.log(p[0]);
-        console.log(p[1]);
-
-        let p1 = document.getElementsByTagName('p')[0];
-        let p2 = document.getElementsByTagName('p')[1];
-        console.log(p1);
-        console.log(p2);
+        
+        let ps = document.querySelectorAll('p');
+        console.log(ps);
+        
+        let ps1 = document.querySelectorAll('p')[0];
+        let ps2 = document.querySelectorAll('p')[1];
+        console.log(ps1);
+        console.log(ps2);
     </script>
 </body>
 </html>
