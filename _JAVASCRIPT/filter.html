@@ -7,8 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="input"  onkeyup="filters()">
+    <!-- <input type="text" id="input"  onkeyup="filters()"> -->
+    <input type="text" id="input">
     <input type="submit" value="篩選" onclick="filters()">
+    <button class="btn">篩選</button>
 
     <ul>
         <li>MacBook Air</li>
@@ -50,7 +52,13 @@
                 }
             }
         }
-
+        // let btn = document.querySelector('.btn');
+        // btn.onclick = function(){
+        //     filters();
+        // }
+        document.querySelector('.btn').onclick = () => {
+            filters();
+        }
     </script>
 </body>
 </html>
