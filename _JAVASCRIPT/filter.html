@@ -30,7 +30,11 @@
     <script>
         function filters(){
             let input = document.querySelector('#input').value;
-            console.log(input);
+
+            let li = Array.from(document.querySelectorAll('li'));
+            for(let data of li){
+                console.log(data.textContent)
+            }
         }
 
     </script>
