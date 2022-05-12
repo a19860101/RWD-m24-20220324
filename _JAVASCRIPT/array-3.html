@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+    <ul>
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+        <li>list 5</li>
+    </ul>
     <script>
         let users = [
             {
@@ -111,6 +118,13 @@
         console.log(str.indexOf('h'));
         console.log(str.indexOf('l'));
         console.log(str.indexOf('a'));
+
+        // Array.from
+
+        let li = Array.from(document.getElementsByTagName('li'));
+        console.log(li);
+        // let liArray = Array.from(li);
+        // console.log(liArray);
     </script>
 </body>
 </html>
