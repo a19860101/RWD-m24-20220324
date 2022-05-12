@@ -33,7 +33,11 @@
 
             let li = Array.from(document.querySelectorAll('li'));
             for(let data of li){
-                console.log(data.textContent)
+                if(data.textContent.indexOf(input) > -1){
+                    data.style.display = '';
+                }else{
+                    data.style.display = 'none';
+                }
             }
         }
 
