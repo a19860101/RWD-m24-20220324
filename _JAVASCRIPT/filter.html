@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text">
-    <input type="submit" value="篩選">
+    <input type="text" id="input">
+    <input type="submit" value="篩選" onclick="filters()">
 
     <ul>
         <li>MacBook Air</li>
@@ -27,5 +27,12 @@
         <li>iPhone 12 Pro</li>
         <li>iPhone 12</li>
     </ul>
+    <script>
+        function filters(){
+            let input = document.querySelector('#input').value;
+            console.log(input);
+        }
+
+    </script>
 </body>
 </html>
