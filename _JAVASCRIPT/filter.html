@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="input">
+    <input type="text" id="input"  onkeyup="filters()">
     <input type="submit" value="篩選" onclick="filters()">
 
     <ul>
@@ -32,8 +32,18 @@
             let input = document.querySelector('#input').value;
 
             let li = Array.from(document.querySelectorAll('li'));
+            // 區分大小寫
+            // for(let data of li){
+            //     if(data.textContent.indexOf(input) > -1){
+            //         data.style.display = '';
+            //     }else{
+            //         data.style.display = 'none';
+            //     }
+            // }
+
+            // 不區分大小寫
             for(let data of li){
-                if(data.textContent.indexOf(input) > -1){
+                if(data.textContent.toUpperCase().indexOf(input.toUpperCase()) > -1){
                     data.style.display = '';
                 }else{
                     data.style.display = 'none';
