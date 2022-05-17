@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans MT';
+            box-sizing: border-box;
+        }
+        .tab {
+            width: 85%;
+            max-width: 600px;
+            text-align: justify;
+            margin: auto;
+        }
+        .tab-nav {
+            width: 100%;
+            display: flex;
+            background-color: #435f56;
+            position: relative;
+            z-index: 999;
+        }
+        .tab-link {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #d2f8ec;
+            transition: 500ms;
+            
+        }
+        .tab-link.active {
+            background-color: #E3FCBF;
+            color: #435f56;
+        }
+        .tab-panel {
+            background-color: #E3FCBF;
+            padding: 15px;
+            display: none;
+            
+        }
+        .tab-panel.active{
+            display: block;
+            animation: fadeIn 500ms;
+        }
+        .tab-panel h2{
+            margin-bottom: 15px;
+        }
+        .tab-panel p {
+            line-height: 1.5rem;
+            margin-bottom: 15px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#tab-1" data-panel="#tab-1" class="tab-link active">tab 1</a>
+            <a href="#tab-2" data-panel="#tab-2" class="tab-link">tab 2</a>
+            <a href="#tab-3" data-panel="#tab-3" class="tab-link">tab 3</a>
+            <a href="#tab-4" data-panel="#tab-4" class="tab-link">tab 4</a>
+        </div>
+        <div class="tab-panel active" id="tab-1">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe expedita at eum velit odio. Accusamus minus reprehenderit saepe id deleniti sit nisi repellat iusto, non, ducimus, nulla assumenda voluptates autem!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe expedita at eum velit odio. Accusamus minus reprehenderit saepe id deleniti sit nisi repellat iusto, non, ducimus, nulla assumenda voluptates autem!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-2">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe expedita at eum velit odio. Accusamus minus reprehenderit saepe id deleniti sit nisi repellat iusto, non, ducimus, nulla assumenda voluptates autem!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe expedita at eum velit odio. Accusamus minus reprehenderit saepe id deleniti sit nisi repellat iusto, non, ducimus, nulla assumenda voluptates autem!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe expedita at eum velit odio. Accusamus minus reprehenderit saepe id deleniti sit nisi repellat iusto, non, ducimus, nulla assumenda voluptates autem!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe expedita at eum velit odio. Accusamus minus reprehenderit saepe id deleniti sit nisi repellat iusto, non, ducimus, nulla assumenda voluptates autem!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-3">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe expedita at eum velit odio. Accusamus minus reprehenderit saepe id deleniti sit nisi repellat iusto, non, ducimus, nulla assumenda voluptates autem!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe expedita at eum velit odio. Accusamus minus reprehenderit saepe id deleniti sit nisi repellat iusto, non, ducimus, nulla assumenda voluptates autem!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe expedita at eum velit odio. Accusamus minus reprehenderit saepe id deleniti sit nisi repellat iusto, non, ducimus, nulla assumenda voluptates autem!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-4">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ad, similique hic doloremque ab cumque.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ad, similique hic doloremque ab cumque.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ad, similique hic doloremque ab cumque.
+            </p>
+        </div>
+    </div>
+    <script>
+        let tabLinks = document.querySelectorAll('.tab-link');
+        for(let tabLink of tabLinks){
+            tabLink.onclick = e => {
+                console.log(e.target);
+                document.querySelector('.tab-link.active').classList.remove('active');
+                e.target.classList.add('active');
+
+
+                let panel = e.target.dataset.panel;
+                document.querySelector('.tab-panel.active').classList.remove('active');
+                document.querySelector(panel).classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
