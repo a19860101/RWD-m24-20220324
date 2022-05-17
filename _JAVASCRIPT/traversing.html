@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- 遍歷 -->
     <div class="container">
         <h1 id="title">dom document object model</h1>
         <p class="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed perferendis maxime incidunt beatae cumque? Sequi molestiae rerum quos laudantium reiciendis vero autem iste laborum commodi accusantium! Ipsum facere accusamus nisi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed perferendis maxime incidunt beatae cumque?
+            Sequi molestiae rerum quos laudantium reiciendis vero autem iste laborum commodi accusantium! Ipsum facere
+            accusamus nisi.
         </p>
         <ul>
             <li class="item">item 1</li>
@@ -52,7 +56,16 @@
             註解節點
         
         */
-       console.log(content.nextElementSibling.children[1])
+        console.log(content.nextElementSibling.children[1]);
+
+        let link = document.querySelector('.link');
+        link.onclick = e => {
+            console.log(e.target);
+            e.target.parentElement.style.backgroundColor = 'red';
+            console.log(e.target.previousElementSibling);
+            e.target.previousElementSibling.style.color = 'yellow';
+        }
     </script>
 </body>
+
 </html>
