@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        .gallery {
+            width: 600px;
+            margin:6% auto;
+        }
+        .gallery-thumbs {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .gallery-item {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://picsum.photos/id/98/800" class="gallery-main">
+        <div class="gallery-thumbs">
+            <img src="https://picsum.photos/id/98/800" class="gallery-item">
+            <img src="https://picsum.photos/id/88/800" class="gallery-item">
+            <img src="https://picsum.photos/id/78/800" class="gallery-item">
+            <img src="https://picsum.photos/id/68/800" class="gallery-item">
+            <img src="https://picsum.photos/id/58/800" class="gallery-item">
+        </div>
+    </div>
+</body>
+</html>
