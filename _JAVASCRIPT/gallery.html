@@ -39,5 +39,14 @@
             <img src="https://picsum.photos/id/58/800" class="gallery-item">
         </div>
     </div>
+    <script>
+        let galleryItem = document.querySelectorAll('.gallery-item');
+        galleryItem.forEach(data => {
+            data.onclick = e => {
+                let thumb = e.target.getAttribute('src');
+                document.querySelector('.gallery-main').setAttribute('src',thumb);
+            }
+        })
+    </script>
 </body>
 </html>
