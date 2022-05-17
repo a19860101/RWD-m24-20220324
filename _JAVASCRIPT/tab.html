@@ -21,16 +21,23 @@
         .tab-nav {
             width: 100%;
             display: flex;
-            background-color: #E3FCBF;
+            background-color: #83ffd6;
         }
         .tab-link {
             padding: 10px 15px;
             text-decoration: none;
             color: #0a4e39;
         }
+        .tab-link.active {
+            background-color: #E3FCBF;
+        }
         .tab-panel {
             background-color: #E3FCBF;
             padding: 15px;
+            display: none;
+        }
+        .tab-panel.active{
+            display: block;
         }
         .tab-panel h2{
             margin-bottom: 15px;
@@ -45,12 +52,12 @@
 <body>
     <div class="tab">
         <div class="tab-nav">
-            <a href="#" class="tab-link">tab 1</a>
+            <a href="#" class="tab-link active">tab 1</a>
             <a href="#" class="tab-link">tab 2</a>
             <a href="#" class="tab-link">tab 3</a>
             <a href="#" class="tab-link">tab 4</a>
         </div>
-        <div class="tab-panel" id="tab-1">
+        <div class="tab-panel active" id="tab-1">
             <h2>title 1</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe expedita at eum velit odio. Accusamus minus reprehenderit saepe id deleniti sit nisi repellat iusto, non, ducimus, nulla assumenda voluptates autem!
@@ -99,5 +106,13 @@
             </p>
         </div>
     </div>
+    <script>
+        let tabLinks = document.querySelectorAll('.tab-link');
+        for(let tabLink of tabLinks){
+            tabLink.onclick = function(){
+                console.log(this);
+            }
+        }
+    </script>
 </body>
 </html>
