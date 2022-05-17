@@ -17,6 +17,8 @@
             max-width: 600px;
             text-align: justify;
             margin: auto;
+
+            position: relative;
         }
         .tab-nav {
             width: 100%;
@@ -39,12 +41,21 @@
         .tab-panel {
             background-color: #E3FCBF;
             padding: 15px;
-            display: none;
+            /* display: none; */
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+            visibility: hidden;
+            transition:opacity  800ms,visibility 100ms 800ms;
             
         }
         .tab-panel.active{
-            display: block;
-            animation: fadeIn 500ms;
+            /* display: block; */
+            opacity: 1;
+            position: absolute;
+            z-index: 10;
+            visibility: visible;
+            transition:opacity  800ms;
         }
         .tab-panel h2{
             margin-bottom: 15px;
@@ -53,12 +64,7 @@
             line-height: 1.5rem;
             margin-bottom: 15px;
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-        }
+        
     </style>
     
 </head>
