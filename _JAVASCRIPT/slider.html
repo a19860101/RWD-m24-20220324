@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+            box-sizing: border-box;
+        }
         .slider {
             width: 1200px;
             height: 600px;
@@ -25,6 +31,16 @@
         }
         .slider-nav {
             position: absolute;
+            width: 100%;
+            background-color: crimson;
+            bottom: 0;
+            text-align: center;
+            padding: 10px;
+        }
+        .slider-next,.slider-prev {
+            color: #fff;
+            text-decoration: none;
+
         }
     </style>
 </head>
@@ -66,8 +82,20 @@
 
         let currentIndex = 0;
 
-        function slider(){
-            currentIndex = (currentIndex + 1) % total;
+        next.onclick = () => {slider();}
+        prev.onclick = () => {slider('prev');}
+
+        function slider(direction){
+
+            if(direction == 'prev'){
+                currentIndex = currentIndex == 0 ? total :currentIndex;
+                currentIndex = (currentIndex - 1) % total;
+            }else{
+                currentIndex = (currentIndex + 1) % total;
+                console.log(currentIndex);
+            }
+
+            
             console.log(currentIndex);
 
             document.querySelector('.slider-item.active').classList.remove('active');
