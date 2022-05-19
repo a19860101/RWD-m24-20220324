@@ -53,7 +53,7 @@
     <a href="#" data-modal="#modal-1" class="modal-btn">Modal 1</a>
     <a href="#" data-modal="#modal-2" class="modal-btn">Modal 2</a>
     <div class="modal" id="modal-1">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
             <div class="modal-header">
                 <h3>Modal 1</h3>
@@ -62,12 +62,12 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eligendi officia vel porro, sequi rem error harum debitis nulla? Similique dolores beatae ullam officiis accusamus vitae ut ratione iure quas.</p>
             </div>
             <div class="modal-footer">
-                <a href="#">Close</a>
+                <a href="#" class="modal-close">Close</a>
             </div>
         </div>
     </div>
     <div class="modal" id="modal-2">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
             <div class="modal-header">
                 <h3>Modal 2</h3>
@@ -78,7 +78,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eligendi officia vel porro, sequi rem error harum debitis nulla? Similique dolores beatae ullam officiis accusamus vitae ut ratione iure quas.</p>
             </div>
             <div class="modal-footer">
-                <a href="#">Close</a>
+                <a href="#" class="modal-close">Close</a>
             </div>
         </div>
     </div>
@@ -87,10 +87,15 @@
         modalBtns.forEach(modalBtn => {
             modalBtn.onclick = e => {
                 let modal = e.target.dataset.modal;
-                console.log(modal);
                 document.querySelector(modal).classList.add('active');
             }
         })
+        document.onclick = e => {
+            console.log(e.target.className.indexOf('modal-close'));
+            if(e.target.className.indexOf('modal-close') > -1){
+                document.querySelector('.modal.active').classList.remove('active');
+            }
+        }
     </script>
 </body>
 </html>
