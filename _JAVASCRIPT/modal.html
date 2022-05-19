@@ -12,6 +12,12 @@
             box-sizing: border-box;
             font-family: 'Segoe UI';
         }
+        .modal {
+            display: none;
+        }
+        .modal.active {
+            display: block;
+        }
         .modal-overlay {
             position: fixed;
             width: 100%;
@@ -38,10 +44,14 @@
         .modal-body {
             margin-bottom: 15px;
         }
+        .modal-body p {
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
-    <a href="#" class="modal-btn">Modal 1</a>
+    <a href="#" data-modal="#modal-1" class="modal-btn">Modal 1</a>
+    <a href="#" data-modal="#modal-2" class="modal-btn">Modal 2</a>
     <div class="modal" id="modal-1">
         <div class="modal-overlay"></div>
         <div class="modal-container">
@@ -56,5 +66,31 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="modal-2">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Modal 2</h3>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eligendi officia vel porro, sequi rem error harum debitis nulla? Similique dolores beatae ullam officiis accusamus vitae ut ratione iure quas.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eligendi officia vel porro, sequi rem error harum debitis nulla? Similique dolores beatae ullam officiis accusamus vitae ut ratione iure quas.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eligendi officia vel porro, sequi rem error harum debitis nulla? Similique dolores beatae ullam officiis accusamus vitae ut ratione iure quas.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        let modalBtns = document.querySelectorAll('.modal-btn');
+        modalBtns.forEach(modalBtn => {
+            modalBtn.onclick = e => {
+                let modal = e.target.dataset.modal;
+                console.log(modal);
+                document.querySelector(modal).classList.add('active');
+            }
+        })
+    </script>
 </body>
 </html>
