@@ -26,6 +26,9 @@
             top: 0;
             left: 0;
         }
+        .modal.active .modal-overlay{
+            animation: fadeIn 200ms;
+        }
         .modal-container {
             position: fixed;
             z-index: 10;
@@ -38,6 +41,9 @@
             padding: 20px;
             border-radius: 8px;
         }
+        .modal.active .modal-container {
+            animation: flyIn 400ms;
+        }
         .modal-header {
             margin-bottom: 15px;
         }
@@ -46,6 +52,16 @@
         }
         .modal-body p {
             margin-bottom: 15px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+        }
+        @keyframes flyIn {
+            from {
+                transform: translate(-50%,-100%);
+            }
         }
     </style>
 </head>
