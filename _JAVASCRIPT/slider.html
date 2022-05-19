@@ -16,6 +16,8 @@
             position: absolute;
             opacity: 0;
             visibility: hidden;
+
+            transition: 1200ms;
         }
         .slider-item.active {
             visibility: visible;
@@ -67,9 +69,12 @@
         function slider(){
             currentIndex = (currentIndex + 1) % total;
             console.log(currentIndex);
+
+            document.querySelector('.slider-item.active').classList.remove('active');
+            document.querySelectorAll('.slider-item')[currentIndex].classList.add('active');
         }
 
-        setInterval(slider,600);
+        setInterval(slider,5000);
     </script>
 </body>
 </html>
