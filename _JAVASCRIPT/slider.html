@@ -89,6 +89,15 @@
 
             if(direction == 'prev'){
                 currentIndex = currentIndex == 0 ? total :currentIndex;
+
+                // if(currentIndex == 0)
+                // {
+                //     currentIndex = total;
+                // }else{
+                //     currentIndex = currentIndex;
+                // }
+
+
                 currentIndex = (currentIndex - 1) % total;
             }else{
                 currentIndex = (currentIndex + 1) % total;
