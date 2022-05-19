@@ -14,6 +14,12 @@
         }
         .slider-item {
             position: absolute;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .slider-item.active {
+            visibility: visible;
+            opacity: 1;
         }
         .slider-nav {
             position: absolute;
@@ -22,7 +28,7 @@
 </head>
 <body>
     <div class="slider">
-        <div class="slider-item">
+        <div class="slider-item active">
             <img src="https://picsum.photos/id/98/1200/600" alt="">
         </div>
         <div class="slider-item">
@@ -40,11 +46,30 @@
         <div class="slider-item">
             <img src="https://picsum.photos/id/58/1200/600" alt="">
         </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/68/1200/600" alt="">
+        </div>
         <div class="slider-nav">
             <a href="#" class="slider-prev">prev</a>
             <a href="#" class="slider-next">next</a>
 
         </div>
     </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
+
+        let currentIndex = 0;
+
+        function slider(){
+            currentIndex = (currentIndex + 1) % total;
+            console.log(currentIndex);
+        }
+
+        setInterval(slider,600);
+    </script>
 </body>
 </html>
