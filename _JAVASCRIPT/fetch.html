@@ -7,16 +7,33 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container"></div>
     <script>
+
+        let container = document.querySelector('.container');
+        // h1 = document.createElement('h1');
+        // h1.append('test');
+        // container.append(h1);
+
         let url = 'data.json';
         fetch(url).then(function(response){
             return response.json();
         }).then(function(data){
             console.log(data);
             for(book of data){
-                console.log(book.name);
-                console.log(book.price);
-                console.log(book.author);
+                
+                let h2 = document.createElement('h2');
+                h2.append(book.name);
+
+                let price = document.createElement('div');
+                price.classList.add('price');
+                price.append(book.price);
+
+                let author = document.createElement('div');
+                author.classList.add('author');
+                author.append(book.author)
+
+                container.append(h2,price,author);
             }
         })
     </script>
