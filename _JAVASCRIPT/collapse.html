@@ -21,9 +21,11 @@
 
             height: 0;
             overflow: hidden;
+            transition: 500ms;
         }
         .collapse-panel.open {
-            height: auto;
+            /* height: auto; */
+            height: 300px;
         }
     </style>
 </head>
@@ -38,5 +40,31 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore laudantium eos, mollitia animi officia praesentium.
         </p>
     </div>
+    <a href="#collapse-2" class="collapse-btn">click</a>
+    <div class="collapse-panel" id="collapse-2">
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nostrum consequuntur officia sapiente blanditiis, ipsum quod culpa molestias et rem officiis modi harum sint? Consectetur eveniet ipsam eligendi ducimus veritatis.
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore laudantium eos, mollitia animi officia praesentium.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nostrum consequuntur officia sapiente blanditiis, ipsum quod culpa molestias et rem officiis modi harum sint? Consectetur eveniet ipsam eligendi ducimus veritatis.
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore laudantium eos, mollitia animi officia praesentium.
+        </p>
+    </div>
+    <script>
+        let collapseBtns = document.querySelectorAll('.collapse-btn');
+        for(let btn of collapseBtns){
+            btn.onclick = e => {
+                let panel = e.target.nextElementSibling;
+                console.log(panel);
+                panel.classList.toggle('open');
+            }
+        }
+    </script>
 </body>
 </html>
