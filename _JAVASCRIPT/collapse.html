@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans MT';
+        }
+        body {
+            padding: 30px;
+        }
+        .collapse-panel {
+            width: 400px;
+            background-color: #ccc;
+
+            height: 0;
+            overflow: hidden;
+        }
+        .collapse-panel.open {
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <a href="#collapse-1" class="collapse-btn">click</a>
+    <div class="collapse-panel" id="collapse-1">
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nostrum consequuntur officia sapiente blanditiis, ipsum quod culpa molestias et rem officiis modi harum sint? Consectetur eveniet ipsam eligendi ducimus veritatis.
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore laudantium eos, mollitia animi officia praesentium.
+        </p>
+    </div>
+</body>
+</html>
