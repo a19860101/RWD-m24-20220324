@@ -57,6 +57,12 @@
         </div>
     </div>
     <script>
+        let w = document.querySelector('.slider-item');
+        // console.log(document.body.clientWidth);
+        // console.log(document.body.offsetWidth);
+        // console.log(document.body.scrollWidth);
+        console.log(w.clientWidth);
+
         let imgs = document.querySelectorAll('.slider-item');
         let total = imgs.length;
         let imgWidth = 1200;
@@ -82,7 +88,7 @@
             wrapper.style.marginLeft = -(imgWidth * currentIndex) + 'px';
         }
 
-        setInterval(slider,3000)
+        // setInterval(slider,3000)
     </script>
 </body>
 </html>
