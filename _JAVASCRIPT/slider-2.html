@@ -12,16 +12,21 @@
             box-sizing: border-box;
         }
         .slider {
-            width: 1200px;
+            width: 1600px;
             margin: auto;
             overflow: hidden;
         }
         .slider-wrapper {
-            display: flex;
+            /* display: flex; */
             transition: 600ms;
         }
         .slider-item {
-            width: 1200px;
+            width: 1600px;
+            float: left;
+        }
+        img {
+            width: 100%;
+            /* display: block; */
         }
     </style>
 </head>
@@ -30,7 +35,7 @@
         <div class="slider-wrapper">
 
             <div class="slider-item active">
-                <img src="https://picsum.photos/id/98/1200/600" alt="">
+                <img src="https://picsum.photos/id/98/1200/600" >
             </div>
             <div class="slider-item">
                 <img src="https://picsum.photos/id/18/1200/600" alt="">
@@ -57,15 +62,15 @@
         </div>
     </div>
     <script>
-        let w = document.querySelector('.slider-item');
+        let w = document.querySelector('.slider').clientWidth;
+        console.log(w)
         // console.log(document.body.clientWidth);
         // console.log(document.body.offsetWidth);
         // console.log(document.body.scrollWidth);
-        console.log(w.clientWidth);
 
         let imgs = document.querySelectorAll('.slider-item');
         let total = imgs.length;
-        let imgWidth = 1200;
+        let imgWidth = w;
         let wrapperWidth = imgWidth * total;
         let wrapper = document.querySelector('.slider-wrapper');
         wrapper.style.width = wrapperWidth + 'px';
@@ -73,7 +78,7 @@
         let next = document.querySelector('.slider-next');
         let prev = document.querySelector('.slider-prev');
         let currentIndex = 0;
-
+        
         next.onclick = () => {slider();}
         prev.onclick = () => {slider('prev');}
 
@@ -84,11 +89,11 @@
             }else{
                 currentIndex = (currentIndex + 1) % total;
             }
-            console.log(currentIndex);
+
             wrapper.style.marginLeft = -(imgWidth * currentIndex) + 'px';
         }
 
-        // setInterval(slider,3000)
+        setInterval(slider,3000)
     </script>
 </body>
 </html>
