@@ -14,6 +14,7 @@
         .slider {
             width: 1200px;
             margin: auto;
+            overflow: hidden;
         }
         .slider-wrapper {
             display: flex;
@@ -67,8 +68,16 @@
         let prev = document.querySelector('.slider-prev');
         let currentIndex = 0;
 
-        function slider(){
-            currentIndex = (currentIndex + 1) % total;
+        next.onclick = () => {slider();}
+        prev.onclick = () => {slider('prev');}
+
+        function slider(direction){
+            if(direction == 'prev'){
+                currentIndex = currentIndex == 0 ? total : currentIndex;
+                currentIndex = (currentIndex - 1) % total;
+            }else{
+                currentIndex = (currentIndex + 1) % total;
+            }
             console.log(currentIndex);
             wrapper.style.marginLeft = -(imgWidth * currentIndex) + 'px';
         }
