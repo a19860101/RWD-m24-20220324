@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border:5px solid #000;
+
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia harum laboriosam deleniti labore non neque commodi ullam dolore porro dicta optio consequuntur voluptate, doloremque rerum tempora est laborum id maiores.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia harum laboriosam deleniti labore non neque commodi ullam dolore porro dicta optio consequuntur voluptate, doloremque rerum tempora est laborum id maiores.
+    </div>
+    <script>
+        let box = document.querySelector('.box');
+
+        console.log(box.clientHeight);// 包含Padding
+        console.log(box.offsetHeight);// 包含padding,border
+        console.log(box.scrollHeight);
+    </script>
+</body>
+</html>
