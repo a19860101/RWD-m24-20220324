@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .slider {
+            width: 1200px;
+            margin: auto;
+        }
+        .slider-wrapper {
+            display: flex;
+        }
+        .slider-item {
+            width: 1200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-wrapper">
+
+            <div class="slider-item active">
+                <img src="https://picsum.photos/id/98/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/18/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/28/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/38/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/48/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/58/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/68/1200/600" alt="">
+            </div>
+        </div>
+        <div class="slider-nav">
+            <a href="#" class="slider-prev">prev</a>
+            <a href="#" class="slider-next">next</a>
+        </div>
+    </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+        let imgWidth = 1200;
+        let wrapperWidth = imgWidth * total;
+        let wrapper = document.querySelector('.slider-wrapper');
+        wrapper.style.width = wrapperWidth + 'px';
+
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
+        let currentIndex = 0;
+    </script>
+</body>
+</html>
