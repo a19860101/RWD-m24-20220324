@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container"></div>
     <script>
@@ -16,26 +18,45 @@
         // container.append(h1);
 
         let url = 'data.json';
-        fetch(url).then(function(response){
-            return response.json();
-        }).then(function(data){
-            console.log(data);
-            for(book of data){
-                
-                let h2 = document.createElement('h2');
-                h2.append(book.name);
+        fetch(url).then(response => response.json())
+            .then(data => {
+                for (book of data) {
 
-                let price = document.createElement('div');
-                price.classList.add('price');
-                price.append(book.price);
+                    let h2 = document.createElement('h2');
+                    h2.append(book.name);
 
-                let author = document.createElement('div');
-                author.classList.add('author');
-                author.append(book.author)
+                    let price = document.createElement('div');
+                    price.classList.add('price');
+                    price.append(book.price);
 
-                container.append(h2,price,author);
-            }
-        })
+                    let author = document.createElement('div');
+                    author.classList.add('author');
+                    author.append(book.author)
+
+                    container.append(h2, price, author);
+                }
+            })
+        // fetch(url).then(function(response){
+        //     return response.json();
+        // }).then(function(data){
+        //     console.log(data);
+        //     for(book of data){
+
+        //         let h2 = document.createElement('h2');
+        //         h2.append(book.name);
+
+        //         let price = document.createElement('div');
+        //         price.classList.add('price');
+        //         price.append(book.price);
+
+        //         let author = document.createElement('div');
+        //         author.classList.add('author');
+        //         author.append(book.author)
+
+        //         container.append(h2,price,author);
+        //     }
+        // })
     </script>
 </body>
+
 </html>
