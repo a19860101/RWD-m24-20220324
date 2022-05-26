@@ -8,11 +8,15 @@
 </head>
 <body>
     <div class="container">
+        <div class="wDate"></div>
         <div class="desc">現在天氣 </div>
         <div>氣溫為<span class="temp"></span>&deg;C </div>
         <div>最高溫為<span class="max"></span>&deg;C</div>
         <div>最低溫為<span class="min"></span>&deg;C</div>
         <div>濕度為<span class="humidity"></span>%</div>
+        <div>
+            資料時間 <span class="wTime"></span>
+        </div>
     </div>
     <!-- b1ecbccd638b763d489602917ba47cc3 -->
     <script>
@@ -29,6 +33,20 @@
             document.querySelector('.max').append(data.main.temp_max);
             document.querySelector('.min').append(data.main.temp_min);
             document.querySelector('.humidity').append(data.main.humidity);
+            let myDate = new Date(data.dt * 1000);
+            let y = myDate.getFullYear();
+            let m = myDate.getMonth()+1;
+            let d = myDate.getDate();
+            let D = myDate.getDay();
+            let hours = myDate.getHours();
+            let minutes = myDate.getMinutes();
+            let seconds = myDate.getSeconds();
+            let weatherDate = y +'-'+ m +'-' + d;
+            let weatherTime = hours+':'+minutes+':'+seconds;
+            console.log(weatherDate);
+            console.log(weatherTime);
+            document.querySelector('.wDate').append(weatherDate);
+            document.querySelector('.wTime').append(weatherTime);
         })
     </script>
 </body>
