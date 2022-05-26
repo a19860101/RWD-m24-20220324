@@ -41,12 +41,16 @@
             let hours = myDate.getHours();
             let minutes = myDate.getMinutes();
             let seconds = myDate.getSeconds();
-            let weatherDate = y +'-'+ m +'-' + d;
-            let weatherTime = hours+':'+minutes+':'+seconds;
+            // let weatherDate = y +'-'+ m +'-' + d;
+            // let weatherTime = hours+':'+minutes+':'+seconds;
+            let weatherDate = `${y}-${m}-${d}`;
+            let weatherTime = `${hours}:${minutes}:${seconds}`;
             console.log(weatherDate);
             console.log(weatherTime);
             document.querySelector('.wDate').append(weatherDate);
             document.querySelector('.wTime').append(weatherTime);
+            //字串樣板
+            console.log(`現在日期${weatherDate}`);
         })
     </script>
 </body>
