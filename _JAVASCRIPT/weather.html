@@ -29,12 +29,25 @@
     <!-- b1ecbccd638b763d489602917ba47cc3 -->
     <script>
         let city = document.querySelector('#city');
+        let temp = document.querySelector('.temp');
+        let desc = document.querySelector('.desc');
+        let max = document.querySelector('.max');
+        let min = document.querySelector('.min');
+        let humidity = document.querySelector('.humidity');
+        let wDate = document.querySelector('.wDate');
+        let wTime = document.querySelector('.wTime');
         city.onchange = e => {
             console.log(e.target.value);
             let q = e.target.value;
             // 攝氏 metric,華氏 imperial
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${q}&appid=b1ecbccd638b763d489602917ba47cc3&units=metric&lang=zh_TW`;
-            document.querySelector('.desc').textContent = '';
+            temp.textContent = '';
+            desc.textContent = '';
+            max.textContent = '';
+            min.textContent = '';
+            humidity.textContent = '';
+            wDate.textContent = '';
+            wTime.textContent = '';
             fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -43,9 +56,9 @@
                 desc.append(data.weather[0].description);
                 let temp = document.querySelector('.temp');
                 temp.append(data.main.temp)
-                document.querySelector('.max').append(data.main.temp_max);
-                document.querySelector('.min').append(data.main.temp_min);
-                document.querySelector('.humidity').append(data.main.humidity);
+                max.append(data.main.temp_max);
+                min.append(data.main.temp_min);
+                humidity.append(data.main.humidity);
                 let myDate = new Date(data.dt * 1000);
                 let y = myDate.getFullYear();
                 let m = myDate.getMonth()+1;
@@ -62,8 +75,8 @@
                 let weatherTime = `${hours}:${minutes}:${seconds}`;
                 console.log(weatherDate);
                 console.log(weatherTime);
-                document.querySelector('.wDate').append(weatherDate);
-                document.querySelector('.wTime').append(weatherTime);
+                wDate.append(weatherDate);
+                wTime.append(weatherTime);
                 //字串樣板
                 console.log(`現在日期${weatherDate}`);
             })
