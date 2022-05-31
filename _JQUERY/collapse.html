@@ -21,40 +21,65 @@
         }
         .collapse-btn {
             background-color: #FAC213;
+            color: #600019;
             padding: 15px;
             transition: 300ms;
             cursor: pointer;
-            border-bottom: #600019 2px solid
+            border-bottom: #600019 2px solid;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
         }
         .collapse-btn:hover {
             background-color: #D61C4E;
+            color: #FEF9A7;
         }
         .collapse-btn.active {
             background-color: #D61C4E;
+            color: #FEF9A7;
+
         }
         .collapse {
             padding: 15px;
             background-color: #FEF9A7;
             display: none;
         }
+        .collapse-icon {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-left: 3px solid #600019;
+            border-bottom: 3px solid #600019;
+            transform: rotate(-45deg);
+        }
+        .collapse-btn:hover .collapse-icon {
+            border-color: #FEF9A7;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2 class="collapse-btn">title 1</h2>
+        <h2 class="collapse-btn">title 1
+            <span class="collapse-icon"></span>
+        </h2>
         <div class="collapse">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa debitis alias velit. Illum ipsa laborum maxime, necessitatibus dolor voluptas laboriosam corrupti sapiente, omnis aliquid eaque delectus assumenda error quidem fuga!</p>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptas at fugiat quas error non obcaecati praesentium ad labore vitae?
             </p>
         </div>
-        <h2 class="collapse-btn">title 2</h2>
+        <h2 class="collapse-btn">title 2
+            <span class="collapse-icon"></span>
+        </h2>
         <div class="collapse">
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque asperiores, unde, harum, maxime quidem minus ut omnis amet libero nostrum similique fugiat? Dolor aspernatur reiciendis fuga numquam, eligendi accusamus soluta!
             </p>
         </div>
-        <h2 class="collapse-btn">title 3</h2>
+        <h2 class="collapse-btn">title 3
+            <span class="collapse-icon"></span>
+        </h2>
         <div class="collapse">
            <p>
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quae cumque quod ipsum? Illo doloribus veniam quas facere libero eligendi!
@@ -63,7 +88,9 @@
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae dicta cumque deleniti necessitatibus eius et delectus, recusandae porro, quam velit non rerum ab ipsam possimus exercitationem minus voluptas veniam maiores.
            </p>
         </div>
-        <h2 class="collapse-btn">title 4</h2>
+        <h2 class="collapse-btn">title 4
+            <span class="collapse-icon"></span>
+        </h2>
         <div class="collapse">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, rerum? Unde laboriosam nobis veniam, deleniti nisi aperiam, sequi enim blanditiis cum eveniet molestias, veritatis nostrum fuga molestiae. Deleniti, quaerat quos?
