@@ -13,8 +13,6 @@
     </style>
 </head>
 <body>
-    <h1 id="title">title</h1>
-    <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui natus fugit deserunt rem aliquam soluta corporis, eveniet magni. Unde nihil sequi cupiditate molestiae, accusamus mollitia repudiandae expedita quo tempora at.</p>
     <script>
         // document.querySelector('#title').style.color = 'red';
         // document.querySelector('#title').classList.add('red');
@@ -24,9 +22,19 @@
         //     color: 'red',
         //     backgroundColor: 'green'
         // });
+        // window.onload = function(){
+        //     $('#title').addClass('red');
+        // }
 
-        $('#title').addClass('red');
-        // console.log(el)
+        // $(document).ready(function(){
+        //     $('#title').addClass('red');
+        // });
+        $(function(){
+            $('#title').addClass('red');
+        })
     </script>
+    <h1 id="title">title</h1>
+    <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui natus fugit deserunt rem aliquam soluta corporis, eveniet magni. Unde nihil sequi cupiditate molestiae, accusamus mollitia repudiandae expedita quo tempora at.</p>
+    
 </body>
 </html>
