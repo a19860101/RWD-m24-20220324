@@ -29,6 +29,9 @@
         .collapse-btn:hover {
             background-color: #D61C4E;
         }
+        .collapse-btn.active {
+            background-color: #D61C4E;
+        }
         .collapse {
             padding: 15px;
             background-color: #FEF9A7;
@@ -76,6 +79,7 @@
                 // $(this).next().toggle(600);
                 // $(this).next().fadeToggle();
                 $(this).next().slideToggle(100);
+                $(this).toggleClass('active');
             })
         })
     </script>
