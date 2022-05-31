@@ -19,14 +19,14 @@
             width: 600px;
             margin: auto;
         }
-        h2 {
+        .collapse-btn {
             background-color: #FAC213;
             padding: 15px;
             transition: 300ms;
             cursor: pointer;
             border-bottom: #600019 2px solid
         }
-        h2:hover {
+        .collapse-btn:hover {
             background-color: #D61C4E;
         }
         .collapse {
@@ -38,20 +38,20 @@
 </head>
 <body>
     <div class="container">
-        <h2>title 1</h2>
+        <h2 class="collapse-btn">title 1</h2>
         <div class="collapse">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa debitis alias velit. Illum ipsa laborum maxime, necessitatibus dolor voluptas laboriosam corrupti sapiente, omnis aliquid eaque delectus assumenda error quidem fuga!</p>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptas at fugiat quas error non obcaecati praesentium ad labore vitae?
             </p>
         </div>
-        <h2>title 2</h2>
+        <h2 class="collapse-btn">title 2</h2>
         <div class="collapse">
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque asperiores, unde, harum, maxime quidem minus ut omnis amet libero nostrum similique fugiat? Dolor aspernatur reiciendis fuga numquam, eligendi accusamus soluta!
             </p>
         </div>
-        <h2>title 3</h2>
+        <h2 class="collapse-btn">title 3</h2>
         <div class="collapse">
            <p>
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quae cumque quod ipsum? Illo doloribus veniam quas facere libero eligendi!
@@ -60,7 +60,7 @@
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae dicta cumque deleniti necessitatibus eius et delectus, recusandae porro, quam velit non rerum ab ipsam possimus exercitationem minus voluptas veniam maiores.
            </p>
         </div>
-        <h2>title 4</h2>
+        <h2 class="collapse-btn">title 4</h2>
         <div class="collapse">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, rerum? Unde laboriosam nobis veniam, deleniti nisi aperiam, sequi enim blanditiis cum eveniet molestias, veritatis nostrum fuga molestiae. Deleniti, quaerat quos?
@@ -70,5 +70,14 @@
             </p>
         </div>
     </div>
+    <script>
+        $(function(){
+            $('.collapse-btn').click(function(){
+                // $(this).next().toggle(600);
+                // $(this).next().fadeToggle();
+                $(this).next().slideToggle(100);
+            })
+        })
+    </script>
 </body>
 </html>
