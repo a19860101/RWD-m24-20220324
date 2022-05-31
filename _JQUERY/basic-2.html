@@ -7,14 +7,26 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <style>
-        .active {
-            color: red;
+        body {
+            font-family: 'Segoe UI';
+        }
+        p {
+            background-color: #FEF9A7;
+            padding: 30px;
+            border-radius: 10px;
+            color: #D61C4E;
+            transition: 300ms;
+        }
+        p.active {
+            background-color: #D61C4E;
+            color: #FEF9A7;
         }
     </style>
 </head>
 <body>
     <button class="add">add</button>
     <button class="remove">remove</button>
+    <button class="toggle">toggle</button>
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, temporibus debitis. Iste dicta libero error itaque odio ducimus nam saepe nemo aliquid omnis nisi reprehenderit fugit incidunt, ullam ipsam. Quas quam nesciunt aliquam, ab perspiciatis soluta, enim, eveniet nihil ipsum quia quasi itaque? Rem vel odit deleniti aliquam recusandae earum.
     </p>
@@ -25,6 +37,9 @@
             });
             $('.remove').click(function(){
                 $('p').removeClass('active');
+            })
+            $('.toggle').click(function(){
+                $('p').toggleClass('active');
             })
         })
     </script>
