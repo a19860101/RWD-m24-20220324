@@ -52,9 +52,18 @@
             border-left: 3px solid #600019;
             border-bottom: 3px solid #600019;
             transform: rotate(-45deg);
+            transition: 300ms;
         }
         .collapse-btn:hover .collapse-icon {
             border-color: #FEF9A7;
+        }
+        .collapse-btn.active .collapse-icon {
+            /* transform: rotate(-225deg); */
+            transform: rotate(135deg);
+            position: relative;
+            bottom: -3px;
+            border-color: #FEF9A7;
+
         }
     </style>
 </head>
