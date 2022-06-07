@@ -55,8 +55,8 @@
     </style>
 </head>
 <body>
-    <input type="text" id="search">
-    <!-- <input type="text" id="year"> -->
+    <input type="text" id="search" placeholder="請輸入關鍵字">
+    <input type="text" id="year" placeholder="請輸入年分">
     <button class="search-btn">搜尋</button>
     <div class="container">
 
@@ -67,20 +67,23 @@
     <script>
         // 18456e59
         $(function(){
+            let search;
+            let year;
+            let apikey = '18456e59';
             $('.search-btn').click(function(){
                 $('.container').empty();
                 $('.paginator').empty();
-                let search = $('#search').val();
-                let year = $('#year').val();
-                console.log(search);
+                search = $('#search').val();
+                year = $('#year').val();
+                // console.log(search);
                 $.ajax({
                     // url: `http://www.omdbapi.com/?apikey=18456e59&s=${search}`,
                     url:'http://www.omdbapi.com/',
                     data:{
-                        apikey:'18456e59',
+                        apikey:apikey,
                         type:'movie',
                         s:search,
-                        // y:year,
+                        y:year,
                     },
                     success:function(res){
                         let pages = Math.ceil(res.totalResults / 10);
@@ -109,8 +112,45 @@
                 })
             })
             $('body').on('click','.page',function(){
+                $('.container').empty();
+                $('.paginator').empty();
                 let p = $(this).data('page');
-                console.log(p);
+                console.log(search);
+                $.ajax({
+                    // url: `http://www.omdbapi.com/?apikey=18456e59&s=${search}`,
+                    url:'http://www.omdbapi.com/',
+                    data:{
+                        apikey:apikey,
+                        type:'movie',
+                        s:search,
+                        y:year,
+                        page:p
+                    },
+                    success:function(res){
+                        let pages = Math.ceil(res.totalResults / 10);
+                        console.log(pages);
+                        console.log(res);
+                        for(let i = 0;i<pages;i++){
+                            $('.paginator').append(`<a href="#" data-page="${i+1}" class="page">${i+1}</a>`);
+                        }
+                        res.Search.forEach(data => {
+                            let title = data.Title;
+                            let poster = data.Poster == 'N/A' ? 'https://picsum.photos/id/12/200/300':data.Poster;
+                            let y = data.Year;
+
+                            let content = `
+                                <div class="item">
+                                    <div class="poster">
+                                        <img src="${poster}">
+                                    </div>
+                                    <small>${y}</small>
+                                    <div>${title}</div>
+                                </div>
+                            `;
+                            $('.container').append(content);
+                        })
+                    }
+                })
             })
             
         })
