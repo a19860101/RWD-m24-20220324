@@ -9,6 +9,7 @@
 </head>
 <body>
     <input type="text" id="search">
+    <input type="text" id="year">
     <button class="search-btn">搜尋</button>
     <div class="container">
 
@@ -18,13 +19,15 @@
         $(function(){
             $('.search-btn').click(function(){
                 let search = $('#search').val();
+                let year = $('#year').val();
                 console.log(search);
                 $.ajax({
                     // url: `http://www.omdbapi.com/?apikey=18456e59&s=${search}`,
                     url:'http://www.omdbapi.com/',
                     data:{
                         apikey:'18456e59',
-                        s:search
+                        s:search,
+                        y:year
                     },
                     success:function(res){
                         console.log(res);
