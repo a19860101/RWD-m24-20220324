@@ -87,7 +87,7 @@
                         console.log(pages);
                         console.log(res);
                         for(let i = 0;i<pages;i++){
-                            $('.paginator').append(`<a href="#" class="page">${i+1}</a>`);
+                            $('.paginator').append(`<a href="#" data-page="${i+1}" class="page">${i+1}</a>`);
                         }
                         res.Search.forEach(data => {
                             let title = data.Title;
@@ -107,6 +107,10 @@
                         })
                     }
                 })
+            })
+            $('body').on('click','.page',function(){
+                let p = $(this).data('page');
+                console.log(p);
             })
             
         })
