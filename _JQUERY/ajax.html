@@ -8,13 +8,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+    <input type="text" id="search">
+    <button class="search-btn">搜尋</button>
+    <div class="container">
+
+    </div>
     <script>
         // 18456e59
-        $.ajax({
-            url: 'http://www.omdbapi.com/?apikey=18456e59&s=spider man',
-            success:function(res){
-                console.log(res);
-            }
+        $(function(){
+            $('.search-btn').click(function(){
+                let search = $('#search').val();
+                console.log(search);
+                $.ajax({
+                    // url: `http://www.omdbapi.com/?apikey=18456e59&s=${search}`,
+                    url:'http://www.omdbapi.com/',
+                    data:{
+                        apikey:'18456e59',
+                        s:search
+                    },
+                    success:function(res){
+                        console.log(res);
+                    }
+                })
+            })
+            
         })
     </script>
 </body>
