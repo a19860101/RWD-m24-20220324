@@ -21,8 +21,8 @@
             width: 100%;
         }
         .item {
-            flex: 0 0 25%;
-            padding: 15px;
+            flex: 0 0 20%;
+            padding: 10px;
         }
 
         .poster img {
@@ -30,6 +30,27 @@
             height: 400px;
             object-fit: cover;
             object-position: center;
+        }
+        .paginator {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            flex-wrap: wrap;
+        }
+        .page {
+            padding: 10px;
+            text-decoration: none;
+            color: #0cb2ff;
+            border: 1px solid #0cb2ff;
+            margin: 5px;
+            transition: 300ms;
+        }
+        .page:hover {
+            background-color: #0cb2ff;
+            color: #000;
         }
     </style>
 </head>
@@ -40,11 +61,15 @@
     <div class="container">
 
     </div>
+    <div class="paginator">
+
+    </div>
     <script>
         // 18456e59
         $(function(){
             $('.search-btn').click(function(){
                 $('.container').empty();
+                $('.paginator').empty();
                 let search = $('#search').val();
                 let year = $('#year').val();
                 console.log(search);
@@ -56,10 +81,14 @@
                         type:'movie',
                         s:search,
                         // y:year,
-                        page:1
                     },
                     success:function(res){
+                        let pages = Math.ceil(res.totalResults / 10);
+                        console.log(pages);
                         console.log(res);
+                        for(let i = 0;i<pages;i++){
+                            $('.paginator').append(`<a href="#" class="page">${i+1}</a>`);
+                        }
                         res.Search.forEach(data => {
                             let title = data.Title;
                             let poster = data.Poster == 'N/A' ? 'https://picsum.photos/id/12/200/300':data.Poster;
