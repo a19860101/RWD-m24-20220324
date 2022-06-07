@@ -56,11 +56,18 @@
             background-color: #0cb2ff;
             color: #000;
         }
+        .err {
+            font-size: 4rem;
+            font-weight: bold;
+            padding: 30px;
+            text-align: center;
+            margin:  10% auto;
+        }
     </style>
 </head>
 <body>
-    <input type="text" id="search" placeholder="請輸入關鍵字" value="spider man">
-    <input type="text" id="year" placeholder="請輸入年分" value="2021">
+    <input type="text" id="search" placeholder="請輸入關鍵字" value="123">
+    <input type="text" id="year" placeholder="請輸入年分" value="2022">
     <button class="search-btn">搜尋</button>
     <div class="container">
 
@@ -73,59 +80,21 @@
         $(function(){
             let search;
             let year;
-            let indexPage = 1;
+            let currentPage = 1;
             let apikey = '18456e59';
             $('.search-btn').click(function(){
-                $('.container').empty();
-                $('.paginator').empty();
+                $('.container,.paginator').empty();
                 search = $('#search').val();
                 year = $('#year').val();
-                // console.log(search);
-                $.ajax({
-                    // url: `http://www.omdbapi.com/?apikey=18456e59&s=${search}`,
-                    url:'http://www.omdbapi.com/',
-                    data:{
-                        apikey:apikey,
-                        type:'movie',
-                        s:search,
-                        y:year,
-                    },
-                    success:function(res){
-                        let pages = Math.ceil(res.totalResults / 10);
-                        // console.log(pages);
-                        // console.log(res);
-                        for(let i = 0;i<pages;i++){
-                            if(i+1 == indexPage){
-                                $('.paginator').append(`<a href="#" data-page="${i+1}" class="page active">${i+1}</a>`);
-                            }else{
-
-                                $('.paginator').append(`<a href="#" data-page="${i+1}" class="page">${i+1}</a>`);
-                            }
-                        }
-                        res.Search.forEach(data => {
-                            let title = data.Title;
-                            let poster = data.Poster == 'N/A' ? 'https://picsum.photos/id/12/200/300':data.Poster;
-                            let y = data.Year;
-
-                            let content = `
-                                <div class="item">
-                                    <div class="poster">
-                                        <img src="${poster}">
-                                    </div>
-                                    <small>${y}</small>
-                                    <div>${title}</div>
-                                </div>
-                            `;
-                            $('.container').append(content);
-                        })
-                    }
-                })
+                getMovie(search,year,currentPage,apikey);                
             })
             $('body').on('click','.page',function(){
-                $('.container').empty();
-                $('.paginator').empty();
-                let p = $(this).data('page');
+                $('.container,.paginator').empty();
+                currentPage = $(this).data('page');
                 // console.log(p);
+                getMovie(search,year,currentPage,apikey);
+            })
+            function getMovie(search,year,currentPage,apikey){
                 $.ajax({
                     // url: `http://www.omdbapi.com/?apikey=18456e59&s=${search}`,
                     url:'http://www.omdbapi.com/',
@@ -134,14 +103,18 @@
                         type:'movie',
                         s:search,
                         y:year,
-                        page:p
+                        page:currentPage
                     },
                     success:function(res){
+                        if(res.Response == 'False'){
+                            $('.container').append(`<div class='err'>${res.Error}</div>`);
+                            return;
+                        }
                         let pages = Math.ceil(res.totalResults / 10);
                         // console.log(pages);
-                        // console.log(res);
+                        console.log(res);
                         for(let i = 0;i<pages;i++){
-                            if(i+1 == p){
+                            if(i+1 == currentPage){
                                 $('.paginator').append(`<a href="#" data-page="${i+1}" class="page active">${i+1}</a>`);
                             }else{
 
@@ -164,9 +137,12 @@
                             `;
                             $('.container').append(content);
                         })
+                    },
+                    error:function(e){
+                        console.log(e);
                     }
                 })
-            })
+            }
             
         })
     </script>
