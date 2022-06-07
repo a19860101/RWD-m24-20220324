@@ -48,6 +48,10 @@
             margin: 5px;
             transition: 300ms;
         }
+        .page.active {
+            background-color: #0cb2ff;
+            color: #000;
+        }
         .page:hover {
             background-color: #0cb2ff;
             color: #000;
@@ -55,8 +59,8 @@
     </style>
 </head>
 <body>
-    <input type="text" id="search" placeholder="請輸入關鍵字">
-    <input type="text" id="year" placeholder="請輸入年分">
+    <input type="text" id="search" placeholder="請輸入關鍵字" value="spider man">
+    <input type="text" id="year" placeholder="請輸入年分" value="2021">
     <button class="search-btn">搜尋</button>
     <div class="container">
 
@@ -69,6 +73,7 @@
         $(function(){
             let search;
             let year;
+            let indexPage = 1;
             let apikey = '18456e59';
             $('.search-btn').click(function(){
                 $('.container').empty();
@@ -87,10 +92,15 @@
                     },
                     success:function(res){
                         let pages = Math.ceil(res.totalResults / 10);
-                        console.log(pages);
-                        console.log(res);
+                        // console.log(pages);
+                        // console.log(res);
                         for(let i = 0;i<pages;i++){
-                            $('.paginator').append(`<a href="#" data-page="${i+1}" class="page">${i+1}</a>`);
+                            if(i+1 == indexPage){
+                                $('.paginator').append(`<a href="#" data-page="${i+1}" class="page active">${i+1}</a>`);
+                            }else{
+
+                                $('.paginator').append(`<a href="#" data-page="${i+1}" class="page">${i+1}</a>`);
+                            }
                         }
                         res.Search.forEach(data => {
                             let title = data.Title;
@@ -115,7 +125,7 @@
                 $('.container').empty();
                 $('.paginator').empty();
                 let p = $(this).data('page');
-                console.log(search);
+                // console.log(p);
                 $.ajax({
                     // url: `http://www.omdbapi.com/?apikey=18456e59&s=${search}`,
                     url:'http://www.omdbapi.com/',
@@ -128,10 +138,15 @@
                     },
                     success:function(res){
                         let pages = Math.ceil(res.totalResults / 10);
-                        console.log(pages);
-                        console.log(res);
+                        // console.log(pages);
+                        // console.log(res);
                         for(let i = 0;i<pages;i++){
-                            $('.paginator').append(`<a href="#" data-page="${i+1}" class="page">${i+1}</a>`);
+                            if(i+1 == p){
+                                $('.paginator').append(`<a href="#" data-page="${i+1}" class="page active">${i+1}</a>`);
+                            }else{
+
+                                $('.paginator').append(`<a href="#" data-page="${i+1}" class="page">${i+1}</a>`);
+                            }
                         }
                         res.Search.forEach(data => {
                             let title = data.Title;
