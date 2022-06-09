@@ -33,27 +33,30 @@
     </style>
 </head>
 <body>
-    <header class="owl-carousel owl-theme">
-        <div>
-            <img src="https://picsum.photos/1200/600?random=1" alt="">
-        </div>
-        <div>
-            <img src="https://picsum.photos/1200/600?random=2" alt="">
-        </div>
-        <div>
-            <img src="https://picsum.photos/1200/600?random=3" alt="">
-        </div>
-        <div>
-            <img src="https://picsum.photos/1200/600?random=4" alt="">
-        </div>
-        <div>
-            <img src="https://picsum.photos/1200/600?random=5" alt="">
-        </div>
-        <div>
-            <img src="https://picsum.photos/1200/600?random=6" alt="">
-        </div>
-        <div>
-            <img src="https://picsum.photos/1200/600?random=7" alt="">
+    <header>
+        <div id="banner" class="owl-carousel owl-theme">
+            
+            <div>
+                <img src="https://picsum.photos/1200/600?random=1" alt="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/1200/600?random=2" alt="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/1200/600?random=3" alt="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/1200/600?random=4" alt="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/1200/600?random=5" alt="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/1200/600?random=6" alt="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/1200/600?random=7" alt="">
+            </div>
         </div>
     </header>
     <div id="product"  class="owl-carousel owl-theme">
@@ -90,7 +93,7 @@
     </div>
     <script>
         $(function(){
-            $('header').owlCarousel({
+            $('#banner').owlCarousel({
                 items: 1,
                 autoplay: true,
                 dots: true,
@@ -99,13 +102,25 @@
                 autoplayTimeout: 5000,
                 autoplaySpeed: 1500,
                 dotsSpeed: 800,
-                navSpeed:400
+                navSpeed:400,
+                stagePadding: 100
 
             });
             $('#product').owlCarousel({
-                items: 4,
+                items: 2,
                 center: true,
-                loop: true
+                loop: true,
+                margin: 20,
+                responsive: {
+                    //600以上
+                    600:{
+                        items:4,
+                    },
+                    //1200以上
+                    1200:{
+                        items:6
+                    }
+                }
             });
         })
     </script>
