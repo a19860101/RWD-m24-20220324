@@ -15,18 +15,28 @@
         }
         header {
             width: 1200px;
-            height: 600px;
             margin: auto;
+            background-color: #000;
         }
         #product {
             width: 1200px;
             margin: 100px auto;
         }
         #product div {
-            margin: 0 15px;
+            /* margin: 0 15px; */
         }
-        #product img {
+        img {
             width: 100%;
+        }
+        .slick-next:before, .slick-prev:before {
+            color: #000;
+        }
+        .slick-slide {
+            opacity: .3;
+            transition: 400ms
+        }
+        .slick-slide.slick-active {
+            opacity: 1;
         }
     </style>
 </head>
@@ -89,7 +99,7 @@
     <script>
         $(function(){
             $('header').slick({
-                autoplay: true,
+                autoplay: false,
                 dots: true,
                 arrows: true,
                 autoplaySpeed: 6000,
@@ -98,8 +108,10 @@
                 centerPadding: '150px'
             });
             $('#product').slick({
-                slidesToShow: 4,
-                dots: true
+                slidesToShow: 3,
+                dots: true,
+                centerMode: true,
+                centerPadding: '100px'
             });
         })
     </script>
