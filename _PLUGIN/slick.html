@@ -18,6 +18,16 @@
             height: 600px;
             margin: auto;
         }
+        #product {
+            width: 1200px;
+            margin: 100px auto;
+        }
+        #product div {
+            margin: 0 15px;
+        }
+        #product img {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -44,6 +54,38 @@
             <img src="https://picsum.photos/1200/600?random=7" alt="">
         </div>
     </header>
+    <div id="product">
+        <div>
+            <img src="https://picsum.photos/400?random=1" alt="">
+        </div>
+        <div>
+            <img src="https://picsum.photos/400?random=2" alt="">
+        </div>
+        <div>
+            <img src="https://picsum.photos/400?random=3" alt="">
+        </div>
+        <div>
+            <img src="https://picsum.photos/400?random=4" alt="">
+        </div>
+        <div>
+            <img src="https://picsum.photos/400?random=5" alt="">
+        </div>
+        <div>
+            <img src="https://picsum.photos/400?random=6" alt="">
+        </div>
+        <div>
+            <img src="https://picsum.photos/400?random=7" alt="">
+        </div>
+        <div>
+            <img src="https://picsum.photos/400?random=8" alt="">
+        </div>
+        <div>
+            <img src="https://picsum.photos/400?random=9" alt="">
+        </div>
+        <div>
+            <img src="https://picsum.photos/400?random=10" alt="">
+        </div>
+    </div>
     <script>
         $(function(){
             $('header').slick({
@@ -51,7 +93,13 @@
                 dots: true,
                 arrows: true,
                 autoplaySpeed: 6000,
-                speed: 800
+                speed: 800,
+                centerMode: true,
+                centerPadding: '150px'
+            });
+            $('#product').slick({
+                slidesToShow: 4,
+                dots: true
             });
         })
     </script>
