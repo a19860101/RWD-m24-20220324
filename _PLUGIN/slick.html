@@ -19,7 +19,8 @@
             background-color: #000;
         }
         #product {
-            width: 1200px;
+            width: 90%;
+            max-width: 1200px;
             margin: 100px auto;
         }
         #product div {
@@ -108,10 +109,24 @@
                 centerPadding: '150px'
             });
             $('#product').slick({
-                slidesToShow: 3,
+                slidesToShow: 5,
                 dots: true,
-                centerMode: true,
-                centerPadding: '100px'
+                responsive:[
+                    {
+                        breakpoint: 1200,//1200以下
+                        settings: {
+                            slidesToShow: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 600,//600以下
+                        settings: {
+                            slidesToShow: 2,
+                            dots:false,
+                            arrows: false
+                        }
+                    }
+                ]
             });
         })
     </script>
