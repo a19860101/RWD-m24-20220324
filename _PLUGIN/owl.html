@@ -91,10 +91,21 @@
     <script>
         $(function(){
             $('header').owlCarousel({
-                items: 1
+                items: 1,
+                autoplay: true,
+                dots: true,
+                nav: true,
+                loop: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1500,
+                dotsSpeed: 800,
+                navSpeed:400
+
             });
             $('#product').owlCarousel({
-                items: 5
+                items: 4,
+                center: true,
+                loop: true
             });
         })
     </script>
